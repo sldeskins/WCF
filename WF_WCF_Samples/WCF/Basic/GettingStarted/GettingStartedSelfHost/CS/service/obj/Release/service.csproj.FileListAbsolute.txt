@@ -1,0 +1,4 @@
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\bin\service.dll
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\bin\service.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\obj\Release\service.dll
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\obj\Release\service.pdb

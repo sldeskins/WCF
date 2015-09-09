@@ -1,0 +1,6 @@
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\client\bin\client.exe.config
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\client\bin\client.exe
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\client\bin\client.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\client\obj\Debug\client.exe
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\client\obj\Debug\client.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\client\obj\Debug\client.csprojResolveAssemblyReference.cache

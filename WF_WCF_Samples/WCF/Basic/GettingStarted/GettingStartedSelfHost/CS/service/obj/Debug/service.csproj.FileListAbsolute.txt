@@ -1,0 +1,10 @@
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\bin\service.dll
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\bin\service.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\obj\Debug\service.csprojResolveAssemblyReference.cache
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\obj\Debug\service.dll
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted\CS\service\obj\Debug\service.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\service\bin\service.dll
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\service\bin\service.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\service\obj\Debug\service.csprojResolveAssemblyReference.cache
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\service\obj\Debug\service.dll
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\service\obj\Debug\service.pdb

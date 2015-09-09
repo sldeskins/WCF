@@ -1,0 +1,5 @@
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\Host\bin\Debug\Host.exe.config
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\Host\bin\Debug\Host.exe
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\Host\bin\Debug\Host.pdb
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\Host\obj\x86\Debug\Host.exe
+C:\Exercises\WCF\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStartedSelfHost\CS\Host\obj\x86\Debug\Host.pdb
