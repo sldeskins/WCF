@@ -39,7 +39,7 @@ namespace GeoLib.Client
         {
             if (txtZipCode.Text != "")
             {
-                GeoClient proxy = new GeoClient("httpEP");
+                GeoClient proxy = new GeoClient("webEP");
                 ZipCodeData data = proxy.GetZipInfo(txtZipCode.Text);
                 if (data != null)
                 {
