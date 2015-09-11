@@ -38,7 +38,7 @@ namespace GeoLib.Client
         {
             if (txtZipCode.Text != "")
             {
-                GeoClient proxy = new GeoClient("tcpEP");
+                GeoClient proxy = new GeoClient("httpEP");
                 ZipCodeData data = proxy.GetZipInfo(txtZipCode.Text);
                 if (data != null)
                 {
@@ -54,6 +54,8 @@ namespace GeoLib.Client
         {
             if (txtState.Text != "")
             {
+                //GeoClient proxy = new GeoClient("httpEP");
+
                 EndpointAddress address = new EndpointAddress("net.tcp://localhost:8009/GeoService");
                 System.ServiceModel.Channels.Binding binding = new NetTcpBinding();
 
@@ -61,7 +63,10 @@ namespace GeoLib.Client
 
                 IEnumerable<ZipCodeData> data = proxy.GetZips(txtState.Text);
 
-                if (data != null) { lstZips.ItemsSource = data; }
+                if (data != null)
+                {
+                    lstZips.ItemsSource = data;
+                }
 
                 proxy.Close();
             }
