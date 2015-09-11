@@ -17,6 +17,7 @@ using System.Diagnostics;
 using GeoLib.Proxies;
 using GeoLib.Contracts;
 using System.ServiceModel;
+using GeoLib.Client.Contracts;
 
 namespace GeoLib.Client
 {
@@ -74,6 +75,20 @@ namespace GeoLib.Client
 
         private void btnMakeCall_Click ( object sender, RoutedEventArgs e )
         {
+            ////when endpoint is in appcofig
+            // ChannelFactory<IMessageService> factory = new ChannelFactory<IMessageService>("");
+
+            ////progammatic configuring endpoint
+            EndpointAddress address = new EndpointAddress("net.tcp://localhost:8010/MessageService");
+            System.ServiceModel.Channels.Binding binding = new NetTcpBinding();
+            ChannelFactory<IMessageService> factory = new ChannelFactory<IMessageService>(binding, address);
+
+            //
+            IMessageService proxy = factory.CreateChannel();
+
+            proxy.ShowMsg(txtMessage.Text);
+
+            factory.Close();
 
         }
     }

@@ -41,14 +41,14 @@ namespace GeoLib.WindowsHost
         }
 
         ServiceHost _HostGeoManager = null;
-        ServiceHost _HostMessageManager=null;
+        ServiceHost _HostMessageManager = null;
 
         private void btnStart_Click ( object sender, RoutedEventArgs e )
         {
 
             _HostGeoManager = new ServiceHost(typeof(GeoManager));
             _HostMessageManager = new ServiceHost(typeof(MessageManager));
-           
+
             _HostGeoManager.Open();
             _HostMessageManager.Open();
 
@@ -69,8 +69,8 @@ namespace GeoLib.WindowsHost
         public void ShowMessage ( string message )
         {
             int threadId = Thread.CurrentThread.ManagedThreadId;
-            lblMessage.Content = message + Environment.NewLine + "UI Running on Thread " + Thread.CurrentThread.ManagedThreadId +
-                " | Process " + Process.GetCurrentProcess().Id.ToString();
+            lblMessage.Content = message + Environment.NewLine + "(shown on thread " + Thread.CurrentThread.ManagedThreadId +
+                " | Process " + Process.GetCurrentProcess().Id.ToString() + ")";
         }
     }
 }
