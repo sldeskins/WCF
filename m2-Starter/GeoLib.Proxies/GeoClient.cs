@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 
 namespace GeoLib.Proxies
 {
     public class GeoClient : ClientBase<IGeoService>, IGeoService
     {
         public GeoClient (string endpointName):base(endpointName)
-        {
-
-        }
-
+        {  }
+        public GeoClient (Binding binding, EndpointAddress endpoint):base(binding, endpoint)
+        {  }
         public ZipCodeData GetZipInfo ( string zip )
         {
             return Channel.GetZipInfo(zip);
