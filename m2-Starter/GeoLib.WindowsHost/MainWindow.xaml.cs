@@ -17,6 +17,7 @@ using System.ServiceModel;
 using GeoLib.Services;
 using System.Diagnostics;
 using GeoLib.WindowsHost.Services;
+using GeoLib.WindowsHost.Contracts;
 
 namespace GeoLib.WindowsHost
 {
@@ -38,10 +39,14 @@ namespace GeoLib.WindowsHost
 
             this.Title = "UI Running on Thread " + Thread.CurrentThread.ManagedThreadId +
             " | Process " + Process.GetCurrentProcess().Id.ToString();
+
+            _SyncContext = SynchronizationContext.Current;
         }
 
         ServiceHost _HostGeoManager = null;
         ServiceHost _HostMessageManager = null;
+
+        SynchronizationContext _SyncContext = null;
 
         private void btnStart_Click ( object sender, RoutedEventArgs e )
         {
@@ -69,8 +74,33 @@ namespace GeoLib.WindowsHost
         public void ShowMessage ( string message )
         {
             int threadId = Thread.CurrentThread.ManagedThreadId;
-            lblMessage.Content = message + Environment.NewLine + "(shown on thread " + Thread.CurrentThread.ManagedThreadId +
-                " | Process " + Process.GetCurrentProcess().Id.ToString() + ")";
+
+            SendOrPostCallback callback = new SendOrPostCallback(arg =>
+            {
+                lblMessage.Content = message + Environment.NewLine +
+                "( marshalled from thread " + threadId + " to thread " +
+                   Thread.CurrentThread.ManagedThreadId +
+                    " | Process " + Process.GetCurrentProcess().Id.ToString() + ")";
+            });
+            _SyncContext.Send(callback, null);
+        }
+
+        private void btnInProc_Click ( object sender, RoutedEventArgs e )
+        {
+            Thread thread = new Thread(() =>
+            {
+
+                ChannelFactory<IMessageService> factory = new ChannelFactory<IMessageService>("");
+
+                IMessageService proxy = factory.CreateChannel();
+
+                proxy.ShowMessage(DateTime.Now.ToLongTimeString() + " from in-process call.");
+
+                factory.Close();
+            });
+
+            thread.IsBackground = true;
+            thread.Start();
         }
     }
 }
